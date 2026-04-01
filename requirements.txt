@@ -1,0 +1,16 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
+streamlit
+sqlalchemy
+pymysql
+mlflow
+openpyxl
+xlrd
+jupyter
+pytest
+pytest-cov
+setuptools
