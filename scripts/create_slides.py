@@ -443,7 +443,45 @@ add_textbox(slide, """
   https://github.com/harleenkaurx19/tellco-analysis
 """, 0.5, 1.3, 12, 5.5, fontsize=18, color=DARK)
 
-# Save presentation
+# ============================================
+# SLIDE 20.5 - DASHBOARD SLIDE
+# ============================================
+slide = add_slide(prs)
+set_bg(slide, WHITE)
+add_textbox(slide, "Live Dashboard", 0.5, 0.3, 12, 1,
+            fontsize=32, bold=True, color=BLUE)
+add_textbox(slide, """
+Streamlit Dashboard built for easy navigation:
+
+🔗 GitHub Repository:
+https://github.com/harleenkaurx19/tellco-analysis
+
+📊 Dashboard Pages:
+- 🏠 Home          - Key metrics overview
+- 📊 User Overview - Top handsets & manufacturers
+- 🔥 Engagement    - App usage & clusters
+- 📡 Experience    - Network performance
+- 😊 Satisfaction  - Scores & predictions
+
+▶ To run dashboard locally:
+  pip install -r requirements.txt
+  streamlit run dashboard/app.py
+""", 0.5, 1.3, 12, 4, fontsize=17, color=DARK)
+
+# Add dashboard screenshot
+screenshot_path = 'data/dashboard_screenshot.png'
+if os.path.exists(screenshot_path):
+    slide.shapes.add_picture(
+        screenshot_path,
+        Inches(0.5), Inches(4.5),
+        Inches(12), Inches(2.8)
+    )
+    print("✅ Dashboard screenshot added!")
+else:
+    add_textbox(slide, 
+        "📸 [Add dashboard screenshot here]",
+        0.5, 4.5, 12, 2,
+        fontsize=16, color=RGBColor(150,150,150))
 prs.save('TellCo_Analysis_Report.pptx')
 print("✅ Presentation created successfully!")
 print("📊 File saved as: TellCo_Analysis_Report.pptx")
