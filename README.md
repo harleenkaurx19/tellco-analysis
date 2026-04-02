@@ -17,6 +17,14 @@ streamlit run dashboard/app.py
 - `scripts/` - Analysis & export scripts
 - `data/` - Dataset & saved features
 - `notebooks/` - Jupyter notebooks
+## Dataset
+The dataset is a telecom xDR dataset containing 150,001 sessions.
+- Place your dataset file in the `data/` folder
+- Rename it to `telecom_data.xlsx`
+- Run `python main.py` to start analysis
+
+## Dashboard Screenshots
+![Dashboard](data/dashboard_screenshot.png)
 
 ## How to Install
 ```
